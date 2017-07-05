@@ -1,12 +1,11 @@
 require_relative 'Bond'
 
-# TODO Name id connect
 class Mind
-	attr_reader :id, :name_ids
+	attr_accessor :id, :word
 
-	def initialize(id, name_ids)
-		@id = id
-		@name_ids = name_ids
+	def initialize
+		@id = nil
+		@word = nil
 		@bonds = {}
 	end
 

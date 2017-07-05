@@ -5,16 +5,17 @@ class WordIndex
 	class << self
 		attr_accessor :index
 
-		def get(name)
-			unless index[name]
-				index[name] = []
+		def get(word)
+			unless index[word]
+				index[word] = []
 			end
 
-			index[name]
+			index[word]
 		end
 
-		def push(name, mind)
-			get(name) << mind
+		def add(word, mind)
+			mind.word = word
+			get(word).push(mind)
 		end
 
 		def length

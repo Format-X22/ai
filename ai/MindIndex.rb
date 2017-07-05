@@ -5,8 +5,9 @@ class MindIndex
 	class << self
 		attr_accessor :index
 
-		def push(val)
-			index << val
+		def add(mind)
+			mind.id = length
+			index.push(mind)
 		end
 
 		def length
